@@ -1,0 +1,91 @@
+.input-container {
+  display: grid;
+  grid-template-columns: 28px 24px max-content;
+  grid-template-rows: auto auto 1px;
+  grid-template-areas:
+    ". . label"
+    "icon seperator input"
+    "border border border";
+  align-items: center;
+}
+
+.input-container label {
+  grid-area: label;
+}
+
+.input-container .icon {
+  grid-area: icon;
+  align-self: center;
+  justify-self: end;
+}
+
+.input-container .seperator {
+  grid-area: seperator;
+  justify-self: center;
+}
+
+.input-container input {
+  grid-area: input;
+  justify-self: start;
+}
+
+.input-container .border {
+  grid-area: border;
+}
+
+.all-inputs {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: auto auto;
+  row-gap: 24px;
+  column-gap: 90px;
+}
+
+.credit-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    "credit-card-icon wifi-icon"
+    "expiry-date ."
+    "card-number card-holder-name";
+    row-gap: 20px;
+    justify-items: start;
+}
+
+.credit-card-container .credit-card-icon {
+  grid-area: credit-card-icon;
+}
+
+.credit-card-container .wifi-icon {
+  grid-area: wifi-icon;
+  justify-self: end;
+}
+
+.credit-card-container .expiry-date {
+  grid-area: expiry-date;
+}
+
+.credit-card-container .card-number {
+  grid-area: card-number;
+}
+
+.credit-card-container .card-holder-name {
+  grid-area: card-holder-name;
+  align-self: center;
+  justify-self: end;
+}
+
+.cart-info {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr 1.75rem;
+  grid-auto-flow: column;
+}
+
+.cart-info .out {
+  grid-column: 1/ -1;
+}
+
+.cart-info .inside {
+  grid-column: 2 / -2;
+}
